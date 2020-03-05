@@ -1,0 +1,103 @@
+---
+title: "assignment2q5"
+author: "Benson Truong"
+date: "1/29/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Attach library
+
+library(tidyverse)
+library(janitor)
+library(corrplot)
+library(stargazer)
+```
+
+```{r}
+#Read in data
+data <- read_csv("DeGoliaSurvey_PSETXLS.csv") %>% 
+  clean_names()
+
+data2 <- read_csv("DeGoliaSurvey_PSETXLS_edit.csv") %>% 
+  clean_names()
+```
+
+```{r}
+#Average support for 3 programs
+data_avg <- data %>% 
+  group_by() %>% 
+  summarize(
+    avg_cap = mean(captrade),
+    avg_rew = mean(renewables),
+    avg_land = mean(landconservation)
+  )
+```
+
+```{r}
+data_males <- data %>% 
+  filter(gender == "1") %>% 
+  group_by() %>% 
+  summarize(
+    avg = mean(captrade)
+  )
+
+data_females <- data %>% 
+  filter(gender == "2") %>% 
+  group_by() %>% 
+  summarize(
+    avg = mean(captrade)
+  )
+```
+
+```{r}
+data_parties <- data %>% 
+  group_by(partyid) %>% 
+  summarize(
+    avg_renew = mean(renewables),
+    avg_land = mean(landconservation)
+  )
+```
+
+```{r}
+#MLR
+
+#Check for correlation
+data_cor <- cor(data[3:8])
+data_cor
+
+corrplot(data_cor)
+
+#Change 1 to male
+```
+
+```{r}
+data_lm <- lm(landconservation ~ education + age + gender + partyid + income, data = data)
+
+data_lm
+plot(data_lm)
+
+summary(data_lm)
+
+AIC(data_lm)
+
+stargazer(data_lm, type = "html")
+
+ggplot(data = data_lm, aes(x = income, y = landconservation))+
+  geom_point(aes(color = partyid))+
+  geom_smooth(method = "lm", color = "black")
+  facet_wrap(~gender)
+```
+
+```{r}
+#Data 2
+data_lm2 <- lm(formula = landconservation ~ education + age + gender + partyid + income, data = data2)
+
+summary(data_lm2)
+  
+```
+
