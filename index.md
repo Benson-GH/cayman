@@ -10,7 +10,7 @@ Text can be **boldya**, _italic_, or ~~strikethrough~~.
 
 [Download CV](./cv.pdf).
 
-![](./media/profile_pic.jpg =250x)
+![](./media/profile_pic.jpg){:height="36px" width="36px"}
 
 There should be whitespace between paragraphs.
 
