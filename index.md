@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Text can be **boldyyyy**, _italic_, or ~~strikethrough~~.
+Text can be **boldya**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
 
