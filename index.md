@@ -10,7 +10,7 @@ Text can be **boldya**, _italic_, or ~~strikethrough~~.
 
 [Download CV](./cv.pdf).
 
-![](./media/profile_pic.jpg){width=250px}
+![](./media/profile_pic.jpg =250x)
 
 There should be whitespace between paragraphs.
 
@@ -19,8 +19,8 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 ```{r}
 library(tidyverse)
+library(knitr)
 ```
-
 # Header 1
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
