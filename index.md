@@ -10,7 +10,7 @@ Text can be **boldya**, _italic_, or ~~strikethrough~~.
 
 [Download CV](./cv.pdf).
 
-![My photo](./media/profile_pic.jpg)
+![](./media/profile_pic.jpg)
 
 There should be whitespace between paragraphs.
 
