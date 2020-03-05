@@ -12,7 +12,7 @@ Text can be **boldya**, _italic_, or ~~strikethrough~~.
 
 [*Link to another project*](./benson_lab_2_trial.html).
 
-![](./media/profile_pic.jpg){:height="250px" width="250px"}
+![](./media/profile_pic.jpg){:height="250px" width="250px"} | I am text to the right|
 
 There should be whitespace between paragraphs.
 
@@ -23,15 +23,20 @@ There should be whitespace between paragraphs. We recommend including a README, 
 library(tidyverse)
 library(knitr)
 ```
-# Header 1
+## About me
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+This is where I write stuff about myself LOL.
 
-## Header 2
+## My coding projects
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+1. [Description of the project](./benson_lab_2_trial.html).
+
+2. [Description of the project](./assignment2_task2_bt.html).
+
+3. [Description of the project](./benson_lab_2_trial.html).
+
+4. [Description of the project](./assignment2_task2_bt.html).
+
 
 ### Header 3
 
