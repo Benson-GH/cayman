@@ -12,20 +12,23 @@ Text can be **boldya**, _italic_, or ~~strikethrough~~.
 
 [*Link to another project*](./benson_lab_2_trial.html).
 
-![](./media/profile_pic.jpg){:height="250px" width="250px"} | I am text to the right|
-
 There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
 
 ```{r}
 library(tidyverse)
 library(knitr)
 ```
+
 ## About me
 
-This is where I write stuff about myself LOL.
+![](./media/profile_pic.jpg){:height="350px" width="350px"} | This is where I write stuff about myself LOL.|
+
+*Contact Information*:
+Email: truongbenson96@gmail.com
+Phone: (626) 221-2854
+[Linkdin](https://www.linkedin.com/in/benson-truong-580570122/)
 
 ## My coding projects
 
