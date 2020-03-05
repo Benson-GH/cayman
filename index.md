@@ -8,12 +8,16 @@ Text can be **boldya**, _italic_, or ~~strikethrough~~.
 
 [Link to a project](./assignment2_task2_bt.html).
 
+[Download CV](./cv.pdf).
+
 There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-library(tidyverse)
 
+```{r}
+library(tidyverse)
+```
 
 # Header 1
 
