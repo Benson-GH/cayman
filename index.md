@@ -25,12 +25,9 @@ library(knitr)
 
 ![](./media/profile_pic.jpg){:height="350px" width="350px"} | This is where I write stuff about myself LOL.|
 
-*Contact Information*:
+**Contact Information:**
 
-Email: truongbenson96@gmail.com
-Phone: (626) 221-2854
-
-[Linkdin](https://www.linkedin.com/in/benson-truong-580570122/)
+truongbenson96@gmail.com | (626) 221-2854| [Linkdin](https://www.linkedin.com/in/benson-truong-580570122/)
 
 ## My coding projects
 
