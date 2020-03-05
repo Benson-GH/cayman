@@ -10,7 +10,7 @@ Text can be **boldya**, _italic_, or ~~strikethrough~~.
 
 [Download CV](./cv.pdf).
 
-[*Link to another project*](./hai.html).
+[*Link to another project*](./benson_lab_2_trial.html).
 
 ![](./media/profile_pic.jpg){:height="250px" width="250px"}
 

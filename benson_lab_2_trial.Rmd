@@ -1,0 +1,161 @@
+---
+title: "Lab 2 - Meet R Markdown"
+author: "Benson Truong"
+date: "10/7/2019"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Here is some text! Hooray!
+
+# Giant Header
+## A little smaller header
+### Even smaller...
+##### A little header
+
+We can make a bulleted list:
+
+- first item
+- second item
+- third item
+
+1. Here is a numbered list
+2. Second item
+3. Third item
+
+We can make things *italicized* or **bold**
+
+We can make superscripts^UP^ and subscripts-DOWN-
+
+I can add a hyperlink: http://ucsb.edu/
+
+Or I can add linked text [like this!](http://ucsb.edu/)
+
+![](teddy_utah.jpg)
+
+### Adding code in R Markdown
+
+For any active code, we need to add it within a code chunk ("crtl"+"alt"+"I"):
+
+```{r, warnings = FALSE, message = FALSE}
+
+# Attach neccessary packages
+
+library(tidyverse)
+library(janitor)
+library(tidyr)
+
+```
+
+### Read in some data
+
+Read in the wb_env.csv
+```{r}
+
+wb_env <- read_csv("wb_env.csv", skip = 4)
+
+```
+
+Gather the wb_env data into long format using pivot_longer()
+
+```{r}
+
+wb_tidy <- wb_env %>% 
+  pivot_longer('1960':'2018',
+               names_to = "year",
+               values_to = "value")
+```
+
+Now a bit more cleaning(make all columns lower snakecase, remove x64, change year to values instead of character):
+-To check if variable(year) is a "character" or "numeric":
+class(wb_df$year)
+```{r}
+
+wb_df <- wb_tidy %>% 
+  janitor::clean_names() %>% 
+  select(-x64) %>% 
+  mutate(year = as.numeric(year))
+
+```
+
+Now I'm going to do some filtering and subsetting to only look at CO2 kTons "CO2 emissions(kt):
+-To find  # of unique values/observations:
+unique(wb_df$indicator_name)
+```{r}
+
+wb_co2 <- wb_df %>% 
+  select(-country_code, -indicator_code) %>% 
+  filter(indicator_name == "CO2 emissions (kt)") %>% 
+  filter(between(year, 2008, 2018)) %>% 
+  group_by(country_name) %>% 
+  summarize(
+    total = sum(value, na.rm = TRUE)
+  ) %>% 
+  arrange(-total)
+```
+
+Now, I'm going to read in the country_list.csv data:
+```{r}
+
+country_list <- read_csv("country_list.csv")
+
+country_ls_new <- country_list %>% 
+  rename(country_name = country)
+```
+
+Now I'm going to join the country list and wb_co2 together using inner_join()
+```{r}
+
+wb_join <- wb_co2 %>% 
+  inner_join(country_ls_new)
+
+#to check which observation didnt match
+wb_anti_join <- wb_co2 %>% 
+  anti_join(country_ls_new)
+
+wb_anti_join2 <- country_ls_new %>% 
+  anti_join(wb_join)
+
+```
+
+Use the head() function to only keep the top 20 CO2 emitters (total CO2 (kt) from 2008 = 2018)
+```{r}
+
+co2_top20 <- wb_join %>% 
+  head(20)
+```
+
+Some options for exploratory graphs:
+```{r}
+
+ggplot(data = co2_top20, aes(x = country_name, y = total))+
+  geom_col()+
+  coord_flip()
+
+# Actually I'm going to convert it to a factor with levels deteremined by the value in"total" column so that there show up in a meaning order...
+
+ggplot(data = co2_top20, aes(x = fct_reorder(country_name, total),
+                             y = total))+
+  geom_col()+
+  coord_flip()
+```
+
+A slightly more customized graph:
+
+```{r}
+ggplot(data = co2_top20, aes(x = fct_reorder(country_name, total),
+                             y = total))+
+  geom_point(aes(color = total),
+             size = 5,
+             show.legend = FALSE)+
+  theme_light()+
+  scale_y_continuous(limits = c(0, 8e7), expand = c(0,0))+
+  coord_flip()
+
+```
+
