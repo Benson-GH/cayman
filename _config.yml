@@ -1,5 +1,5 @@
 title: Benson Truong
-description: This website showcases my data anaylsis projects done using R.
-show_downloads: false
+description: This website showcases my coding projects using R!
+show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
