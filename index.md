@@ -2,11 +2,7 @@
 layout: default
 ---
 
-Text can be **boldya**, _italic_, or ~~strikethrough~~.
-
 [Link to another page](./another-page.html).
-
-[Link to a project](./assignment2_task2_bt.html).
 
 [Download CV](./cv.pdf).
 
@@ -23,7 +19,7 @@ library(knitr)
 
 ## About me
 
-![](./media/profile_pic.jpg){:height="350px" width="350px"} | This is where I write stuff about myself LOL.|
+![](./media/profile_pic.jpg){:height="350px" width="350px"} | This is where I write stuff about myself LOL. [Download CV](./cv.pdf).|
 
 **Contact Information:**
 
