@@ -4,10 +4,6 @@ layout: default
 
 [Link to another page](./another-page.html).
 
-[Download CV](./cv.pdf).
-
-[*Link to another project*](./benson_lab_2_trial.html).
-
 * * *
 
 ## About Me
@@ -21,12 +17,6 @@ My name is Benson Truong and I'm from San Gabriel, California. I am currently a 
 * * *
 
 
-
-
-**Contact Information:**
-
-truongbenson96@gmail.com | (626) 221-2854| [Linkdin](https://www.linkedin.com/in/benson-truong-580570122/)
-
 ## My coding projects
 
 1. [Description of the project](./benson_lab_2_trial.html).
@@ -39,7 +29,7 @@ truongbenson96@gmail.com | (626) 221-2854| [Linkdin](https://www.linkedin.com/in
 
 * * *
 
-### Skills:
+## Skills:
 
 *   R & RStudio
 *   GitHub
@@ -55,5 +45,3 @@ truongbenson96@gmail.com | (626) 221-2854| [Linkdin](https://www.linkedin.com/in
 
 
 ![](./media/landscape.jpg)
-
-* * *
