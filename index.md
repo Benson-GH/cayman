@@ -38,4 +38,5 @@ My name is Benson Truong and I'm from San Gabriel, California. I'm currently a g
 truongbenson96@gmail.com | (626) 221-2854| [Linkedin](https://www.linkedin.com/in/benson-truong-580570122/)
 
 ![](./media/landscape.jpg)
-*Photo Credit:* [Lanny Le](https://vsco.co/lannyle/gallery)
+
+###### *Photo Credit:* [*Lanny Le*](https://vsco.co/lannyle/gallery)
