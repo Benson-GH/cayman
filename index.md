@@ -13,13 +13,13 @@ My name is Benson Truong and I'm from San Gabriel, California. I'm currently a g
 
 ## **My Coding Projects**
 
-1. [Data Wrangling and Visualization of Snow Hares](./proj/snow_hares.html).
+1. [Data Wrangling and Visualization of Snow Hares](./proj/snow_hares.html)
 
-2. [Measuring Abundance of Salamanders](./proj/salamanders.html).
+2. [Measuring Abundance of Salamanders](./proj/salamanders.html)
 
-3. [Time Series Analysis for Steelhead Trout](./proj/ts_proj.html).
+3. [Time Series Analysis for Steelhead Trout](./proj/ts_proj.html)
 
-4. [Principal Components Analysis on Nutrients](./proj/nutrient.html).
+4. [Principal Components Analysis on Nutrients](./proj/nutrient.html)
 
 * * *
 
@@ -38,3 +38,4 @@ My name is Benson Truong and I'm from San Gabriel, California. I'm currently a g
 truongbenson96@gmail.com | (626) 221-2854| [Linkedin](https://www.linkedin.com/in/benson-truong-580570122/)
 
 ![](./media/landscape.jpg)
+*Photo Credit:* [Lanny Le](https://vsco.co/lannyle/gallery)
